@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+# Trigger the workflow on push request
+on:
+  push:
+    branches: [main]
+    
+# Define the jobs
+jobs:
+    deploy-to-pages:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: '3.12'
+
+            - name: Cache pip
+              uses: actions/cache@v2
+              with:
+                  path: ~/.cache/pip
+                  key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pip-
+                      ${{ runner.os }}-
+
+            - name: Install dependencies
+              shell: bash
+              run: |
+                  python install --upgrade pip
+                  pip install -r docs/requirements.txt
+
+            - name: Build HTML
+              run: |
+                  cd docs
+                  make html
+                  sphinx-build -D language=en -b html ./ _build/html/en
+
+            - name: Clean up files
+              run: rm -r docs/_build/doctrees/
+
+            - name: Deploy to GitHub pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: docs/_build/html
+                  user_name: "github-actions[bot]"
+                  user_email: "github-actions[bot]@users.noreply.github.com"
