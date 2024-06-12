@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Neobanker'
-copyright = '2024, SHEN Lingyu'
-author = 'SHEN Lingyu'
+copyright = '2024, Neobanker'
+author = 'Neobanker'
 release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
