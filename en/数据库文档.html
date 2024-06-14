@@ -1,0 +1,3481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoBanker数据库文档 &mdash; Neobanker 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Neobanker
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">导航</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">关于我们</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neobanker</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NeoBanker数据库文档</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/数据库文档.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="neobanker">
+<h1>NeoBanker数据库文档<a class="headerlink" href="#neobanker" title="Link to this heading"></a></h1>
+<p><strong>数据库名：</strong> neobanker</p>
+<p><strong>文档版本：</strong> 0.0.1-SNAPSHOT</p>
+<p><strong>文档描述：</strong> 数据库文档生成</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>表名</p></th>
+<th class="head text-left"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#account"><span class="xref myst">account</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#campaign"><span class="xref myst">campaign</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#campaign_url"><span class="xref myst">campaign_url</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#card_welfare"><span class="xref myst">card_welfare</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#company"><span class="xref myst">company</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#company_location"><span class="xref myst">company_location</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#company_news"><span class="xref myst">company_news</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#company_news_tag"><span class="xref myst">company_news_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#company_overview_tag"><span class="xref myst">company_overview_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#company_owner"><span class="xref myst">company_owner</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#company_product"><span class="xref myst">company_product</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#company_search"><span class="xref myst">company_search</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#company_tag"><span class="xref myst">company_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#company_tag_news_tag"><span class="xref myst">company_tag_news_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#director"><span class="xref myst">director</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#finance"><span class="xref myst">finance</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#funding"><span class="xref myst">funding</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#investment"><span class="xref myst">investment</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#license"><span class="xref myst">license</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#license_obtainment"><span class="xref myst">license_obtainment</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#location"><span class="xref myst">location</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#management_tag"><span class="xref myst">management_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#management_team_staff"><span class="xref myst">management_team_staff</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#management_team_tag"><span class="xref myst">management_team_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#marketing"><span class="xref myst">marketing</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#partner"><span class="xref myst">partner</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#product_bank_account"><span class="xref myst">product_bank_account</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#product_card"><span class="xref myst">product_card</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#product_deposit"><span class="xref myst">product_deposit</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#product_interest_rate"><span class="xref myst">product_interest_rate</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#product_lending"><span class="xref myst">product_lending</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#product_transfer_and_exchange"><span class="xref myst">product_transfer_and_exchange</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#report"><span class="xref myst">report</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#shareholder"><span class="xref myst">shareholder</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference internal" href="#shareholder_category_tag"><span class="xref myst">shareholder_category_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><a class="reference internal" href="#shareholder_tag"><span class="xref myst">shareholder_tag</span></a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="account">account</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>email</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>pass_word</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>phone_number</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>role</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>status</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>user_name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="campaign"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1X5wd6856RjlS7UtjOUc5LyRrEyt1K5hN/edit?gid=421797027#gid=421797027">campaign</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>campaign_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>campaign_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>is_successful</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>marketing_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>update_date</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>company_product_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>marketing_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="campaign_url"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1pf2KLnPrfFcocwbppYQ_9UfnelVEh1VT-U4p3IWvU80/edit?gid=0#gid=0">campaign_url</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>img_url</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>campaign_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="card_welfare">card_welfare</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>details</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>rebate</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>reward_method</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>card_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1ZvCwiflm1-OCvDWr2Os_FH4ID5RHRoaL/edit?gid=1038217367#gid=1038217367">company</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>ceoname</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>bank_code</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>bank_swift</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>branding</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>company_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>employee_size</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>founded_time</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>founder_name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>logo_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11</p></td>
+<td class="text-left"><p>motto</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>12</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>13</p></td>
+<td class="text-left"><p>number_of_user</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>14</p></td>
+<td class="text-left"><p>public_company</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>15</p></td>
+<td class="text-left"><p>revenue</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>16</p></td>
+<td class="text-left"><p>spotlight</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>17</p></td>
+<td class="text-left"><p>status</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>18</p></td>
+<td class="text-left"><p>tech_summary</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>19</p></td>
+<td class="text-left"><p>web3summary</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>20</p></td>
+<td class="text-left"><p>website</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>21</p></td>
+<td class="text-left"><p>finance_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>22</p></td>
+<td class="text-left"><p>marketing_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_location"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1RdYitMmsMHkho3ZFNVGRFsSHEKFkYbAtPQ82KP1s89w/edit?gid=0#gid=0">company_location</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>address</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>is_hq</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>local_company_name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>location_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_news"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1nRxg_31owgudZpt_R2qsCcndSfuKYHxk/edit?gid=1816371904#gid=1816371904">company_news</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>img_url</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>language</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>source</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>tag</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>title</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>update_time</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_news_tag">company_news_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_overview_tag">company_overview_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>company_tag_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_owner"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1B-HYxFlhyELJ7hwZaJzxoeAwcmJX3pcfTXCLbxMaAQs/edit?gid=0#gid=0">company_owner</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>percent</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_product"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1rT_mgKcHn27rQm9U_Y19jUe2M3yJOAOO/edit?gid=2121384073#gid=2121384073">company_product</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>client_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>company_product_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>innovation</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>is_innovative</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>product_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_search"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1RqRBlKimRxf6FIN4bI4zkY-Wt-XRVf4c/edit?gid=2041209550#gid=2041209550">company_search</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>location</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>logo_url</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_tag">company_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="company_tag_news_tag">company_tag_news_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>company_tag_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>company_news_tag_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="director">director</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>background_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>director_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="finance"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1iMzVr9KvWsPXCeRGGBEm-CR6pVmV2o-s/edit?gid=766353775#gid=766353775">finance</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>break_even</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>break_even_point</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>company_valuation</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>finance_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>funding_amount</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>funding_round</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>leading_investment</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>links</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>market_cap</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11</p></td>
+<td class="text-left"><p>profit_or_loss</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>12</p></td>
+<td class="text-left"><p>report_count</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>13</p></td>
+<td class="text-left"><p>roi</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>14</p></td>
+<td class="text-left"><p>total_investment</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="funding"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1b7oTSKLsw9Zx3TxJIOwfJhP-sqnidoDe/edit?gid=165509222#gid=165509222">funding</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>announced_date</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>funding_round</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>lead_investor</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>money_raised</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>number_of_investors</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>finance_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="investment"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1XW2QaB-L-bF3AVqSSvqyvXxcz74JpfDr/edit?gid=661867755#gid=661867755">investment</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>announced_date</p></td>
+<td class="text-center"><p>datetime</p></td>
+<td class="text-center"><p>26</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>funding_round</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>money_raised</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>organization_name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>finance_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="license"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1CZyMv3K-E80OZUpfZjS39bUGmZbTcMTuU6Yt3t_aKeY/edit?gid=0#gid=0">license</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>licenser</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>location_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="license_obtainment">license_obtainment</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>appointed_company</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>time</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>company_product_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>license_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="location"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1HNWdfpbs9AMRjNxSIrw9P1gTJQY46baMDAX-unrT_Ss/edit?gid=0#gid=0">location</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>countries</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>iso_code</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>location_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>region</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="management_tag">management_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>staff_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>management_team_tag_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="management_team_staff"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1uD34l2coZducXTb4RdX-Xz6Zl5MVnG0o/edit?rtpof=true&amp;amp;gid=668836879#gid=668836879">management_team_staff</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>department</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>img_url</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>staff_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>title</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>director_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="management_team_tag">management_team_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>staff_type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="marketing"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1HNWdfpbs9AMRjNxSIrw9P1gTJQY46baMDAX-unrT_Ss/edit?gid=0#gid=0">marketing</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>app_store_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>app_store_star</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>category_rank</p></td>
+<td class="text-center"><p>int</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>company_strategy</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>customers_growth</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>deposit_market_share</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>downloads</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>facebook</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>facebook_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11</p></td>
+<td class="text-left"><p>google_play_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>12</p></td>
+<td class="text-left"><p>google_play_star</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>13</p></td>
+<td class="text-left"><p>instagram</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>14</p></td>
+<td class="text-left"><p>instagram_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>15</p></td>
+<td class="text-left"><p>language_available</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>16</p></td>
+<td class="text-left"><p>linkedin</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>17</p></td>
+<td class="text-left"><p>linkedin_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>18</p></td>
+<td class="text-left"><p>marketing_sort_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>19</p></td>
+<td class="text-left"><p>number_of_customers</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>20</p></td>
+<td class="text-left"><p>tiktok</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>21</p></td>
+<td class="text-left"><p>tiktok_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>22</p></td>
+<td class="text-left"><p>twitter</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>23</p></td>
+<td class="text-left"><p>twitter_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>24</p></td>
+<td class="text-left"><p>wechat</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>25</p></td>
+<td class="text-left"><p>wechat_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>26</p></td>
+<td class="text-left"><p>xhs</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>27</p></td>
+<td class="text-left"><p>xhs_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>28</p></td>
+<td class="text-left"><p>youtube</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>29</p></td>
+<td class="text-left"><p>youtube_id</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="partner">partner</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>logo_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>card_welfare_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_bank_account">product_bank_account</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>account_maintenance_fee</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>aer</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>campaign_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>daily_operation_and_registration</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>documents_required</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>e_statement</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>easy_switch</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>foreign_cash_withdrawal_fee</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11</p></td>
+<td class="text-left"><p>foreign_transaction_fee</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>12</p></td>
+<td class="text-left"><p>min_opening_balance</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>13</p></td>
+<td class="text-left"><p>min_opening_deposit</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>14</p></td>
+<td class="text-left"><p>min_operating_balance</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>15</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>16</p></td>
+<td class="text-left"><p>target_age</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>17</p></td>
+<td class="text-left"><p>target_client</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>18</p></td>
+<td class="text-left"><p>target_customer</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>19</p></td>
+<td class="text-left"><p>type_of_account</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_card">product_card</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>appearance_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>campaign_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>card_type</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>target_client</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_deposit">product_deposit</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>max_deposit_amount</p></td>
+<td class="text-center"><p>bigint</p></td>
+<td class="text-center"><p>19</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>max_deposit_duration</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>min_deposit_amount</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>min_deposit_duration</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>target_client</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>withdrawing_allowed</p></td>
+<td class="text-center"><p>bit</p></td>
+<td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_interest_rate">product_interest_rate</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>cnyinterest_rate</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>hkdinterest_rate</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>usdinterest_rate</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>deposit_period</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>bank_account_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>deposit_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_lending">product_lending</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>apr</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>avg_existing_user_approval_time</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>avg_new_user_approval_time</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>campaign_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>lending_type</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-left"><p>loan_amount</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-left"><p>target_client</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="product_transfer_and_exchange">product_transfer_and_exchange</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>campaign_link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>description</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>supported_partners</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>target_client</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>type_of_account</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="report"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1T3ozzSf1Eji2F6XNumpIcK1MMZmx05AW/edit?gid=2113842611#gid=2113842611">report</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>type</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>year</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="shareholder"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YRt2jDS3hu0mIj_96yeTSothRu8ykp7W/edit?gid=1239809944#gid=1239809944">shareholder</a></a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>introduction</p></td>
+<td class="text-center"><p>text</p></td>
+<td class="text-center"><p>65535</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-left"><p>link</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-left"><p>shareholding</p></td>
+<td class="text-center"><p>double</p></td>
+<td class="text-center"><p>22</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-left"><p>type</p></td>
+<td class="text-center"><p>tinyint</p></td>
+<td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-left"><p>company_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="shareholder_category_tag">shareholder_category_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>shareholder_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>shareholder_tag_id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>表名：</strong> <a id="shareholder_tag">shareholder_tag</a></p>
+<p><strong>说明：</strong></p>
+<p><strong>数据列：</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>序号</p></th>
+<th class="head text-left"><p>名称</p></th>
+<th class="head text-center"><p>数据类型</p></th>
+<th class="head text-center"><p>长度</p></th>
+<th class="head text-center"><p>小数位</p></th>
+<th class="head text-center"><p>允许空值</p></th>
+<th class="head text-center"><p>主键</p></th>
+<th class="head text-center"><p>默认值</p></th>
+<th class="head text-center"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-left"><p>id</p></td>
+<td class="text-center"><p>binary</p></td>
+<td class="text-center"><p>16</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-left"><p>name</p></td>
+<td class="text-center"><p>varchar</p></td>
+<td class="text-center"><p>255</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>Y</p></td>
+<td class="text-center"><p>N</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Neobanker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
