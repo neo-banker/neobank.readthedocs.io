@@ -22,7 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="关于此文档" href="about.html" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" /> 
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="NeoBanker数据库文档" href="%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E6%A1%A3.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,8 +46,161 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <p class="caption" role="heading"><span class="caption-text">导航</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">研究中心背景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E6%A1%A3.html">NeoBanker数据库文档</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Neobanker前后端接口规范文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accountcontroller">AccountController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#login">login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register">register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getaccount">getAccount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleteaccount">deleteAccount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resetpassword">resetPassword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcomapanysearch">importComapanySearch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#campaign-controller">Campaign Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcampaign">getCampaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcampaign">addCampaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcampaignuuid">getCampaignUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcampaign">importCampaign</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#campaignurlcontroller">CampaignUrlController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcampaignurl">getCampaignUrl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcampaignurl">addCampaignUrl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcampaignurl">importCampaignUrl</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#company-controller">Company Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listall">listAll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompany">getCompany</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getid">getId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompany">addCompany</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deletecompany">deleteCompany</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyuuid">getCompanyUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcompany">importCompany</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companylocationcontroller">CompanyLocationController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanylocation">getCompanyLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanylocation">addCompanyLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcompanylocation">importCompanyLocation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companynews-controller">CompanyNews Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-the-home-page">for the Home page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getallnews">getAllNews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanynews">getCompanyNews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanynews">addCompanyNews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcomapanynews">importComapanyNews</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deleteallcompanynews">deleteAllCompanyNews</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companynewstagcontroller">CompanyNewsTagController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanynewstag">getCompanyNewsTag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanynewstag">addCompanyNewsTag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companyownercontroller">CompanyOwnerController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyowner">getCompanyOwner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanyowner">addCompanyOwner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcompanyowner">importCompanyOwner</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companysearchcontroller">CompanySearchController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcomapanysearch">getComapanySearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyidbyid">getCompanyIdById</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyinfo">getCompanyInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcomapanysearch">addComapanySearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">importComapanySearch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companytag-controller">CompanyTag Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanytag">getCompanyTag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanytag">addCompanyTag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#directorcontroller">DirectorController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getdirector">getDirector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adddirector">addDirector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#finance-controller">Finance Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getfinance">getFinance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addfinance">addFinance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getfinanceuuid">getFinanceUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importfinance">importFinance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funding-controller">Funding Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getfunding">getFunding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addfunding">addFunding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importfunding">importFunding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#inverstmentcontroller">inverstmentController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getinvestment">getInvestment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addinvestment">addInvestment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#licensecontroller">LicenseController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getlicense">getLicense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addlicense">addLicense</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#locationcontroller">LocationController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getlocation">getLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addlocation">addLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getlocationuuid">getLocationUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importlocation">importLocation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#staff-controller">Staff Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getstaff">getStaff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importmanagementteamstaff">importManagementTeamStaff</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#managementteamtag-controller">ManagementTeamTag Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getmanagementteamtag">getManagementTeamTag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addmanagementteamtag">addManagementTeamTag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#marketing-controller">Marketing Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getmarketing">getMarketing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addmarketing">addMarketing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getmarketinguuid">getMarketingUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importmarketing">importMarketing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#report-controller">Report Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getreport">getReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addreport">addReport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importreport">importReport</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#shareholder-controller">Shareholder Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getshareholder">getShareholder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addshareholder">addShareholder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importshareholder">importShareholder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#shareholdertag-controller">ShareholderTag Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shareholdertagrepo">shareholderTagRepo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addshareholdertag">addShareholderTag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#companyproductcontroller">CompanyProductController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">for the Home page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyproduct">getCompanyProduct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addcompanyproduct">addCompanyProduct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getcompanyproductuuid">getCompanyProductUuid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importcomapanyproduct">importComapanyProduct</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -10334,7 +10488,9 @@ together with the company name, location and logo of the related company</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E6%A1%A3.html" class="btn btn-neutral float-left" title="NeoBanker数据库文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
 
   <hr/>
 
